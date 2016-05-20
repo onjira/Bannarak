@@ -18,12 +18,8 @@ class insertAnnouncementCest
         $I->fillField('.//*[@id="txtDetail"]','Test Description');
         $I->fillField('.//*[@id="txtUpdateBy"]','jol-lnw-boy-za');
         $I->click('.//*[@id="btnSubmit"]');
-        // $I->click('.jquery-msgbox-button-submit');
-        // $I->executeJS("window.prompt");
         $I->wait(2);
         $I->acceptPopup();
-        // $js_confirm = 'window.confirm = function(){ return true; }';
-        // $I->executeJS($js_confirm);
         $I->amOnUrl('http://localhost:8888/bannarak/Announcement/view.php');
         $I->click('.//*[@id="btnSearch"]');
         $I->see('123123');
@@ -35,14 +31,6 @@ class insertAnnouncementCest
         $I->fillField('.//*[@id="txtTopic"]','test');
         $I->selectOption('.//*[@id="ddlType"]','Announcement');
         $I->click('.//*[@id="btnSearch"]');
-        // $I->click('.jquery-msgbox-button-submit');
-        // $I->executeJS("window.prompt");
-        // $I->wait(2);
-        // $I->acceptPopup();
-        // $js_confirm = 'window.confirm = function(){ return true; }';
-        // $I->executeJS($js_confirm);
-        // $I->amOnUrl('http://localhost:8888/bannarak/Announcement/view.php');
-        // $I->click('.//*[@id="btnSearch"]');
         $I->see('test');
     }
 
@@ -52,14 +40,6 @@ class insertAnnouncementCest
         $I->fillField('.//*[@id="txtTopic"]','test');
         $I->selectOption('.//*[@id="ddlType"]','Announcement');
         $I->click('.//*[@id="btnSearch"]');
-        // $I->click('.jquery-msgbox-button-submit');
-        // $I->executeJS("window.prompt");
-        // $I->wait(2);
-        // $I->acceptPopup();
-        // $js_confirm = 'window.confirm = function(){ return true; }';
-        // $I->executeJS($js_confirm);
-        // $I->amOnUrl('http://localhost:8888/bannarak/Announcement/view.php');
-        // $I->click('.//*[@id="btnSearch"]');
         $I->see('test');
         $I->click('.//*[@id="tbFromQuery"]/tbody/tr[2]/td[7]/button');
         $I->see('Edit');
