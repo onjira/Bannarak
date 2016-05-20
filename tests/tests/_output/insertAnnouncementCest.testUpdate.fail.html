@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+		<title>BANNARAK ADMIN</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<meta content="your,keywords" name="keywords" />
+		<meta content="Short explanation about this website" name="description" />
+		<!-- END META -->
+
+		<!-- BEGIN STYLESHEETS -->
+				<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/bootstrap.css?1422792965%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/materialadmin.css?1425466319%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/font-awesome.min.css?1422529194%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/material-design-iconic-font.min.css?1421434286%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/libs/rickshaw/rickshaw.css?1422792967%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/libs/morris/morris.core.css?1420463396%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/customize.css%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/libs/bootstrap-datepicker/datepicker3.css?1424887858%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/libs/bootstrap-colorpicker/bootstrap-colorpicker.css?1424887860%20" rel="stylesheet" type="text/css" />
+		<link href="http://localhost:8888/Bannarak/Library/css/theme-default/libs/DataTables/jquery.dataTables.css%20" rel="stylesheet" type="text/css" />
+
+		<!-- END STYLESHEETS -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../../assets/js/libs/utils/html5shiv.js?1403934957"></script>
+		<script type="text/javascript" src="../../assets/js/libs/utils/respond.min.js?1403934956"></script>
+		<![endif]-->
+	<style type="text/css"></style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>	<body onload="PageLoad()" class="menubar-hoverable header-fixed ">
+
+		<!-- BEGIN HEADER-->
+				<header id="header">
+			<div class="headerbar">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="headerbar-left">
+					<ul class="header-nav header-nav-options">
+						<li class="header-nav-brand">
+							<div class="brand-holder">
+								<a href="#">
+									<span class="text-lg text-bold text-primary">BANNARAK</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0);" data-toggle="menubar" class="btn btn-icon-toggle menubar-toggle">
+								<i class="fa fa-bars"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="headerbar-right">
+					 <ul class="header-nav header-nav-options">
+						<li>
+							<form role="search" class="navbar-search">
+								<div class="form-group">
+									<input type="hidden" placeholder="Enter your keyword" name="headerSearch" class="form-control" />
+								</div>
+								<!-- <button type="submit" class="btn btn-icon-toggle ink-reaction"><i class="fa fa-search"></i></button> -->
+							</form>
+						</li>
+					</ul> 
+
+				
+				</div><!--end #header-navbar-collapse -->
+			</div>
+		</header>
+
+
+		<!-- END HEADER-->
+
+		<!-- BEGIN BASE-->
+		<div id="base">
+
+			<!-- BEGIN OFFCANVAS LEFT -->
+			<div class="offcanvas">
+			</div>
+			<!--end .offcanvas-->
+			<!-- END OFFCANVAS LEFT -->
+
+			<!-- BEGIN CONTENT-->
+			<div id="content">
+				<section>
+					<div class="section-header">
+						<ol class="breadcrumb">
+							<li>Announcement</li>
+							<li class="active">Edit</li>
+						</ol>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card">
+							<div class="card-head card-head-lg style-primary ">
+								<header>Announcement Form</header>
+							</div><div class="card-body">
+								<form role="form" class="form-horizontal">
+									<div class="row">
+										<div class="col-lg-2">
+											<!-- NULL -->
+										</div>
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-bold" for="txtAnnouncementID">Announcement ID</label>
+												<div class="col-sm-9">
+													<div class="input-group date">
+														<div class="input-group-content">
+															<input type="text" id="txtAnnouncementID" class="form-control" disabled="disabled" /><div class="form-control-line"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-2">
+											<!-- NULL -->
+										</div>
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-bold" for="txtTopic">Topic</label>
+												<div class="col-sm-9">
+													<div class="input-group date">
+														<div class="input-group-content">
+															<input type="text" id="txtTopic" class="form-control" /><div class="form-control-line"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-lg-2">
+											<!-- NULL -->
+										</div>
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-bold" for="ddlType">Type</label>
+												<div class="col-sm-5">
+													<select style="margin-top:16px; " class="form-control" id="ddlType">
+														<option value=""> (select type) </option>
+														<option value="News">News</option>
+														<option value="Announcement">Announcement</option>
+														<option value="Activity">Activity</option>
+													</select><div class="form-control-line"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-2">
+											<!-- NULL -->
+										</div>
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-bold" for="txtDetail">Detail</label>
+												<div class="col-sm-9">
+													<div class="input-group date">
+														<div class="input-group-content">
+															<textarea id="txtDetail" class="form-control" cols="50" rows="10">Test Description</textarea><div class="form-control-line"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-2">
+											<!-- NULL -->
+										</div>
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-bold" for="txtUpdateBy">Update By</label>
+												<div class="col-sm-9">
+													<div class="input-group date">
+														<div class="input-group-content">
+															<input type="text" id="txtUpdateBy" class="form-control" /><div class="form-control-line"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</form>
+								<div class="card-actionbar">
+									<div class="card-actionbar-row">
+										<!-- <button type="submit" class="btn btn-flat btn-primary ink-reaction">Create account</button> -->
+									</div>
+								</div>
+							</div><!--end .card-body -->
+						</div><!--end .card -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-right">
+							<button id="btnCancle" style="margin-right: 10px;" class="btn btn-danger btn-lg" type="button">Cancle</button>
+							<button id="btnSave" class="btn btn-primary btn-lg" type="button">Save</button>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--end #content-->
+			<!-- END CONTENT -->
+
+			<!-- BEGIN MENUBAR-->
+			<div class="menubar-inverse  animate" id="menubar">
+				<div class="menubar-fixed-panel">
+					<div>
+						<a href="javascript:void(0);" data-toggle="menubar" class="btn btn-icon-toggle btn-default menubar-toggle">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+					<div class="expanded">
+						<a href="#">
+							<span class="text-lg text-bold text-primary ">BANNARAK ADMIN</span>
+						</a>
+					</div>
+				</div>
+				<div class="nano" style="height: 630px;"><div class="nano-content" tabindex="0" style="right: -14px; padding-right: 14px;"><div class="menubar-scroll-panel" style="padding-bottom: 33px;">
+
+					<!-- BEGIN MAIN MENU -->
+					<ul class="gui-controls" id="main-menu">
+
+					<!-- BEGIN Employee -->
+					<li class="gui-folder">
+						<a>
+							<div class="gui-icon"><i class="md md-announcement"></i></div>
+							<span class="title">Announcement</span>
+						</a>
+						<!--start submenu -->
+						<ul>
+							<li class=""><a href="../Announcement/Add.php"><span class="title">Create</span></a></li>
+							<li class=""><a href="../Announcement/view.php"><span class="title">View/Update</span></a></li>
+						</ul><!--end /submenu -->
+					</li><!--end /menu-li -->
+					<!-- END Employee -->	
+
+					</ul><!--end .main-menu -->
+					<!-- END MAIN MENU -->
+
+					<div class="menubar-foot-panel">
+						<small class="no-linebreak hidden-folded">
+							<span class="opacity-75">Copyright © 2014</span> <strong>Rtjol-Bannarak</strong>
+						</small>
+					</div>
+
+				</div></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 630px; transform: translate(0px, 0px);"></div></div></div><!--end .menubar-scroll-panel-->
+			</div><!--end #menubar-->			<!-- END MENUBAR -->
+
+		</div><!--end #base-->
+		<!-- END BASE -->
+	
+	<footer>
+
+	
+		<!-- BEGIN JAVASCRIPT -->
+				<script src="http://localhost:8888/Bannarak/Library/js/libs/jquery/jquery-1.11.2.min.js%20"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/bootstrap/bootstrap.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/spin.js/spin.min.js"></script> ?&gt;
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/autosize/jquery.autosize.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/moment/moment.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/flot/jquery.flot.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/flot/jquery.flot.time.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/flot/jquery.flot.resize.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/flot/jquery.flot.orderBars.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/flot/jquery.flot.pie.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/flot/curvedLines.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/jquery-knob/jquery.knob.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/sparkline/jquery.sparkline.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/d3/d3.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/d3/d3.v3.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/rickshaw/rickshaw.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/App.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/AppNavigation.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/AppOffcanvas.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/AppCard.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/AppForm.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/AppNavSearch.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/source/AppVendor.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/DataTables/jquery.dataTables.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/core.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/core/demo/DemoTableDynamic.js"></script>
+		<script src="http://localhost:8888/Bannarak/Library/js/libs/inputmask/jquery.inputmask.bundle.min.js"></script>
+		<!-- END JAVASCRIPT -->	</footer>
+
+
+
+
+	<script>
+	function PageLoad(){
+		var AnnouncementID = getUrlParamArray("AnnouncementID")[0];
+		$('#txtAnnouncementID').val(AnnouncementID);
+		$('#txtAnnouncementID').attr('disabled',true);
+  		$.ajax({
+			type: "POST",
+			url: "php/GetData.php",
+			data: {AnnouncementID :AnnouncementID  },
+			success: function(response){
+				console.log(response);
+				var data = $.parseJSON(response);
+
+				$('#txtTopic').val(data.Announcement.Topic);
+				$('#txtUpdateBy').val(data.Announcement.UpdateBy);
+			    $('#ddlType').val(data.Announcement.Type);
+			    $('#txtDetail').text(data.Announcement.Detail);
+
+			}
+		});
+
+	}
+	function getUrlParamArray(param){
+		param = param.replace(/([\[\](){}*?+^$.\\|])/g, "\\$1");
+		var value = [];
+		var regex = new RegExp("[?&amp;]" + param + "=([^&amp;#]*)", "g");
+		var url   = decodeURIComponent(window.location.href);
+		var match = null;
+		while (match = regex.exec(url)) {
+			value.push(match[1]);
+		}    
+		return value;
+	}
+
+	$( '#btnCancle' ).click(function() {
+		location.href = "view.php";
+	});
+
+	$( '#btnSave' ).click(function() {
+		$.ajax({
+			type: "POST",
+			url: "php/Update.php",
+			data: {
+				Topic:$('#txtTopic').val(),
+				Type:$('#ddlType').val(),
+                AnnouncementID: $('#txtAnnouncementID').val(),
+                Detail: $('#txtDetail').val(),
+                UpdateBy: $('#txtUpdateBy').val()
+			},
+			success: function(response){
+				if(response == 1){
+					alert("Announcement Updated Success");
+					location.href = 'view.php';
+				}
+				else{
+					alert("Error log : " + response);
+				}
+
+				
+			}
+		});
+	});
+
+	
+	</script><div id="device-breakpoints"><div data-breakpoint="xs" class="device-xs visible-xs"></div><div data-breakpoint="sm" class="device-sm visible-sm"></div><div data-breakpoint="md" class="device-md visible-md"></div><div data-breakpoint="lg" class="device-lg visible-lg"></div></div></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1280" height="929"></canvas></html>

@@ -1,0 +1,40 @@
+.background-login {
+	background-image: url('../../assets/img/login-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+.card-login {
+	margin-top: 150px;
+	max-width: 500px;
+}
+
+.card-body.login {
+	padding: 50px;
+}
+
+.header-nav.header-nav-profile {
+	margin-right: 40px;s
+}
+
+table{
+    table-layout: fixed;
+}
+
+th, td {
+    overflow: hidden;
+}
+
+td.num {
+	width: 30px;
+}
+
+td.btnTd{
+	width: 100px;
+}
+
+td input{
+	width: 100%;
+}
