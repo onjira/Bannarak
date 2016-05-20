@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php include("../header.php"); 
-	$main_page = 'salary';
+	$main_page = 'Announcement';
     $sub_page = 'view';
     ?>
 	<body class="menubar-hoverable header-fixed ">
@@ -12,15 +12,7 @@
 
 		<!-- BEGIN BASE-->
 		<div id="base">
-
-			<!-- BEGIN OFFCANVAS LEFT -->
-			<div class="offcanvas">
-			</div>
-			<!--end .offcanvas-->
-			<!-- END OFFCANVAS LEFT -->
-
 			<!-- BEGIN CONTENT-->
-			
 			<div id="content">
 				<section>
 					<div class="section-header">
@@ -77,10 +69,9 @@
 									</div>
 								</div>
 									</div>
-							</div><!--end .card-body -->
-						</div><!--end .card -->
+							</div>
+						</div>
 					</div>
-
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="card">
@@ -96,10 +87,7 @@
 						</div>
 					</div>
 				</section>
-
 			</div>
-		
-			<!--end #content-->
 			<!-- END CONTENT -->
 
 			<!-- BEGIN MENUBAR-->
@@ -107,23 +95,31 @@
 		        include '../menubar.php';
 		    ?>
 			<!-- END MENUBAR -->
-
-		</div><!--end #base-->
+		</div>
 		<!-- END BASE -->
 	</form>
 	</body>
-	<footer>
 
+	<!-- BEGIN FOOTER -->
+	<footer>
 	<?php include '../footer.php';
 	?>
 	</footer>
+	<!-- END FOOTER -->
+
+	<!-- BEGIN SCRIPT-->
 	<script>
+
+		/* SEARCH BUTTON ONCLICK EVENT */
 		$('#btnSearch').click(function(){
+			/* Filter Checking */
 			var Topic = "",Type = "",StartFrom = "",StartTo = "";
 			if($('#txtTopic').val() != "") Topic = $('#txtTopic').val();
 			if($('#ddlType').val() != "") Type = $('#ddlType').val();
 			if($('#txtStartFrom').val() != "") 	StartFrom = $('#txtStartFrom').val();
 			if($('#txtStartTo').val() != "") 	StartTo = $('#txtStartTo').val();
+
+			/*Search Event (ajax call 'php/Search.php')*/
 			$.ajax({
 				type: "POST",
 				url: "php/Search.php",
@@ -140,15 +136,15 @@
 			});
 		});
 
+		/* UPDATE BUTTON ONCLICK EVENT */
 		function toEdit( AnnouncementID ){
 			$('#frmViewAnnouncement').attr('action','edit.php');
 			$('#frmViewAnnouncement').attr('method','GET');
 			$('#frmViewAnnouncement').append("<input type='hidden' name='AnnouncementID' value='"+AnnouncementID+"' />");
-
 			$('#frmViewAnnouncement').submit();
 		}
 
 	</script>
-
+	<!-- END SCRIPT -->
 </html>
 

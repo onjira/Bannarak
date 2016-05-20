@@ -1,4 +1,5 @@
 <?php 
+	/* Include Database Connection Component */
 	require_once('../../Database/Connection.php');
 
 	/* Connect Database */
@@ -18,6 +19,10 @@
 	$where = "AnnoucementID = '".$AnnouncementID."'";
 	$inst = $db->update("announcement", $data, $where);
 
+	/* Close Database */
+	$db->closedb();
+
+	/* Return for Response */
 	print $inst;
 
 ?>

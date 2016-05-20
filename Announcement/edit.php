@@ -12,13 +12,6 @@
 
 		<!-- BEGIN BASE-->
 		<div id="base">
-
-			<!-- BEGIN OFFCANVAS LEFT -->
-			<div class="offcanvas">
-			</div>
-			<!--end .offcanvas-->
-			<!-- END OFFCANVAS LEFT -->
-
 			<!-- BEGIN CONTENT-->
 			<div id="content">
 				<section>
@@ -125,15 +118,9 @@
 											</div>
 										</div>
 									</div>
-									
 								</form>
-								<div class="card-actionbar">
-									<div class="card-actionbar-row">
-										<!-- <button type="submit" class="btn btn-flat btn-primary ink-reaction">Create account</button> -->
-									</div>
-								</div>
-							</div><!--end .card-body -->
-						</div><!--end .card -->
+							</div>
+						</div>
 						</div>
 					</div>
 					<div class="row">
@@ -144,49 +131,28 @@
 					</div>
 				</section>
 			</div>
-			<!--end #content-->
 			<!-- END CONTENT -->
-
 			<!-- BEGIN MENUBAR-->
 			<?php
 		        include '../menubar.php';
 		    ?>
 			<!-- END MENUBAR -->
-
-		</div><!--end #base-->
+		</div>
 		<!-- END BASE -->
 	</body>
-	<footer>
 
+	<!-- BEGIN FOOTER -->
+	<footer>
 	<?php include '../footer.php';
 	?>
 	</footer>
-
+	<!-- END FOOTER -->
 
 </html>
-
+	<!-- BEGIN SCRIPT -->
 	<script>
-	function PageLoad(){
-		var AnnouncementID = getUrlParamArray("AnnouncementID")[0];
-		$('#txtAnnouncementID').val(AnnouncementID);
-		$('#txtAnnouncementID').attr('disabled',true);
-  		$.ajax({
-			type: "POST",
-			url: "php/GetData.php",
-			data: {AnnouncementID :AnnouncementID  },
-			success: function(response){
-				console.log(response);
-				var data = $.parseJSON(response);
 
-				$('#txtTopic').val(data.Announcement.Topic);
-				$('#txtUpdateBy').val(data.Announcement.UpdateBy);
-			    $('#ddlType').val(data.Announcement.Type);
-			    $('#txtDetail').text(data.Announcement.Detail);
-
-			}
-		});
-
-	}
+	/* GET VALUE FROM URL*/
 	function getUrlParamArray(param){
 		param = param.replace(/([\[\](){}*?+^$.\\|])/g, "\\$1");
 		var value = [];
@@ -199,11 +165,36 @@
 		return value;
 	}
 
+	/* ON PAGE LOAD EVENT*/
+	function PageLoad(){
+		var AnnouncementID = getUrlParamArray("AnnouncementID")[0];
+		$('#txtAnnouncementID').val(AnnouncementID);
+		$('#txtAnnouncementID').attr('disabled',true);
+
+		/* QUERY DATA FROM ANNOUNCEMENT ID */
+  		$.ajax({
+			type: "POST",
+			url: "php/GetData.php",
+			data: {AnnouncementID :AnnouncementID  },
+			success: function(response){
+				console.log(response);
+				var data = $.parseJSON(response);
+				$('#txtTopic').val(data.Announcement.Topic);
+				$('#txtUpdateBy').val(data.Announcement.UpdateBy);
+			    $('#ddlType').val(data.Announcement.Type);
+			    $('#txtDetail').text(data.Announcement.Detail);
+			}
+		});
+	}
+	
+	/* CANCLE BUTTON EVENT */
 	$( '#btnCancle' ).click(function() {
 		location.href = "view.php";
 	});
 
+	/* SAVE BUTTON EVENT */
 	$( '#btnSave' ).click(function() {
+		/* UPDATE TO DATABASE */
 		$.ajax({
 			type: "POST",
 			url: "php/Update.php",
@@ -221,12 +212,8 @@
 				}
 				else{
 					alert("Error log : " + response);
-				}
-
-				
+				}			
 			}
 		});
 	});
-
-	
 	</script>

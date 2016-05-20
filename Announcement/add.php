@@ -12,13 +12,6 @@
 
 		<!-- BEGIN BASE-->
 		<div id="base">
-
-			<!-- BEGIN OFFCANVAS LEFT -->
-			<div class="offcanvas">
-			</div>
-			<!--end .offcanvas-->
-			<!-- END OFFCANVAS LEFT -->
-
 			<!-- BEGIN CONTENT-->
 			<div id="content">
 				<section>
@@ -98,8 +91,8 @@
 										</div>
 									</div>
 
-							</div><!--end .card-body -->
-						</div><!--end .card -->
+							</div>
+						</div>
 						</div>
 					</div>
 					<div class="row">
@@ -110,29 +103,28 @@
 					</div>
 				</section>
 			</div>
-			<!--end #content-->
 			<!-- END CONTENT -->
-
 			<!-- BEGIN MENUBAR-->
 			<?php
 		        include '../menubar.php';
 		    ?>
 			<!-- END MENUBAR -->
-
-		</div><!--end #base-->
+		</div>
 		<!-- END BASE -->
 	</body>
+
+	<!-- BEGIN FOOTER -->
 	<footer>
-	<script src="../Library/js/libs/jquery/jquery-1.11.2.min.js"></script>
-    <script src="../Library/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
     <?php include '../footer.php';?>
     </footer>
+    <!-- END FOOTER -->
 
+    <!-- BEGIN SCRIPT -->
 	<script type="text/javascript">
-
-
+		/* SUBMIT BUTTON ONCLICK EVENT */
 		$("#btnSubmit").click(function(){
 			if(RequiredField()){
+				/* INSERT TO DATABASE EVENT*/
 				$.ajax({
 	               type: "POST",
 	               url: "php/Insert.php",
@@ -156,6 +148,7 @@
 			}
 		});
 
+		/* RESET BUTTON ONCLICK EVENT */
 		$("#btnReset").click(function(){
 			$('#txtTopicName').val(""); 
 			$('#ddlType').val(""); 
@@ -163,6 +156,7 @@
 			$('#txtUpdateBy').val(""); 
 		});
 
+		/* TEXTBOX CHECKING */
 		function RequiredField(){
 				if( $('#txtTopicName').val() == ""){
 					alert("Please fill Topic Name");
@@ -184,9 +178,8 @@
 					return true;
 				}
 		}
-
-
 	</script>
+	<!-- END SCRIPT -->
 
 </html>
 
