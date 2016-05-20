@@ -47,22 +47,7 @@
 											</select>
 										</form>
 									</div>
-									<div class="col-lg-2">
-										<form class="form">
-											<div class="form-group floating-label">
-												<input type="text" class="form-control" id="txtStartFrom" name="datepicker">
-												<label for="txtStartFrom">Start Date</label>
-											</div>
-										</form>
-									</div>
-									<div class="col-lg-2">
-										<form class="form">
-											<div class="form-group floating-label">
-												<input type="text" class="form-control" id="txtStartTo" name="datepicker">
-												<label for="txtStartTo">End Date</label>
-											</div>
-										</form>
-									</div>
+									
 									<div class="col-lg-1 text-center text-xl">
 										<button type="submit" class="btn btn-flat btn-primary ink-reaction"
 										style="margin-top: 15px; margin-left: 20px;" id="btnSearch">Search</button>	
